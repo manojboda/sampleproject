@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+ 
+ 
+<h1>Spring Boot - Success</h1>
+ 
+ 
+ 
+<div th:if="${message}">
+     
+<h2 th:text="${message}"/>
+</div>
+ 
+ 
+<div th:if="${name}">
+    Name : <b th:text="${name}"/>
+</div>
+ 
+ 
+<div th:if="${email}">
+   Email : <b th:text="${email}"/>
+</div>
+ 
+ 
+<div th:each="file : ${files}" style="float:left;">
+ <img th:attr="src=@{'/image/' + ${file}},title=${file},alt=${file}" />
+</div>
+ 
+</body>
+</html>
